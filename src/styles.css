@@ -1,19 +1,13 @@
-@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import './assets/styles/font-awesome.css';
-@import './assets/styles/animate.min.css';
-@import './assets/styles/owl.carousel.css';
-@import './assets/styles/owl.theme.css';
-@import './assets/styles/custom.css';
-@import './assets/styles/style.default.css';
-
-.buttons .btn {
-    margin: 2px;
-}
-
-.products-number .btn {
-    margin: 2px;
-}
-
-.black-overlay {
-    position: fixed !important;
-}
+/* You can add global styles to this file, and also import other style files */
+@import './assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css';
+@import './assets/fonts/themify/themify-icons.css';
+@import './assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css';
+@import './assets/fonts/elegant-font/html-css/style.css';
+@import './assets/vendor/animate/animate.css';
+@import './assets/vendor/css-hamburgers/hamburgers.min.css';
+@import './assets/vendor/animsition/css/animsition.min.css';
+@import './assets/vendor/select2/select2.min.css';
+@import './assets/vendor/slick/slick.css';
+@import './assets/vendor/noui/nouislider.min.css';
+@import './assets/css/main.css';
+@import './assets/css/util.css';
