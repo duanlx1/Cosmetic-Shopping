@@ -11,6 +11,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CartComponent } from './cart/cart.component';
     ListComponent,
     DetailComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

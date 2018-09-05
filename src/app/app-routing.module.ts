@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routConfig: Routes = [
 
@@ -13,6 +14,7 @@ const routConfig: Routes = [
     { path: 'product/list', component: ListComponent },
     { path: 'product/detail/:id', component: DetailComponent },
     { path: 'cart', component: CartComponent },
+    { path: 'contact', component: ContactComponent },
     // { path: '', redirectTo: 'product/list', pathMatch: 'full' },
     { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
