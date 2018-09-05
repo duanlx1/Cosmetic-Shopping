@@ -29,7 +29,6 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "src/assets/vendor/animsition/js/animsition.min.js",
-              "src/assets/js/my.js",
               "src/assets/vendor/bootstrap/js/popper.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
               "src/assets/vendor/slick-1.8.1/slick/slick.min.js",
