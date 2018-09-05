@@ -29,19 +29,18 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "src/assets/vendor/animsition/js/animsition.min.js",
+              "src/assets/js/my.js",
               "src/assets/vendor/bootstrap/js/popper.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
               "src/assets/vendor/slick-1.8.1/slick/slick.min.js",
               "src/assets/js/slick-custom.js",
-              "src/assets/vendor/select2/select2.min.js",
+              "src/assets/vendor/select2/select2.js",
               "src/assets/vendor/daterangepicker/moment.min.js",
               "src/assets/vendor/daterangepicker/daterangepicker.js",
               "src/assets/vendor/sweetalert/sweetalert.min.js",
               "src/assets/vendor/noui/nouislider.min.js",
               "src/assets/vendor/countdowntime/countdowntime.js",
-              "src/assets/vendor/lightbox2/js/lightbox.min.js",
-              "src/assets/js/main.js",
-              "src/assets/js/my.js"
+              "src/assets/vendor/lightbox2/js/lightbox.min.js"
             ]
           },
           "configurations": {
