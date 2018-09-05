@@ -9,12 +9,16 @@ import { DetailComponent } from './product/detail/detail.component';
 import { ListComponent } from './product/list/list.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ListComponent,
+    DetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

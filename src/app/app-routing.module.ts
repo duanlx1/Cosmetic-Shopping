@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 const routConfig: Routes = [
 
+    { path: '', component: HomeComponent },
     { path: 'product/list', component: ListComponent },
     { path: 'product/detail/:id', component: DetailComponent },
-    { path: '', redirectTo: 'product/list', pathMatch: 'full' },
+    // { path: '', redirectTo: 'product/list', pathMatch: 'full' },
     { path: '**', redirectTo: 'product/list', pathMatch: 'full' }
 ];
 
@@ -18,10 +20,6 @@ const routConfig: Routes = [
         CommonModule,
         RouterModule.forRoot(routConfig),
         FormsModule, ReactiveFormsModule
-    ],
-    declarations: [
-        ListComponent,
-        DetailComponent
     ],
     exports: [RouterModule]
 })
