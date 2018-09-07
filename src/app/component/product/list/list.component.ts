@@ -18,21 +18,22 @@ export class ListComponent implements OnInit {
   constructor(private meta: Meta, private pageTitle: Title) { }
 
   ngOnInit() {
+
+    const branch = 'Kappa';
     // Set page title
-    this.pageTitle.setTitle(String.Format(Seo.title_product_list, 'Cosmetic'));
+    this.pageTitle.setTitle(String.Format(Seo.title_product_list, branch));
 
     // Define the keyword
     const keywords: MetaDefinition = {
       name: 'keywords',
-      content: String.Format(Seo.keyword_product_list, 'Cosmetic', 'Cosmetic')
+      content: String.Format(Seo.keyword_product_list, branch, branch, branch, branch, branch, branch, branch)
     };
 
     // Define the description
     const description: MetaDefinition = {
       name: 'description',
-      content: String.Format(Seo.description_product_list, 'Cosmetic')
+      content: String.Format(Seo.description_product_list, branch)
     };
-
 
     this.meta.addTags([keywords, description]);
   }
