@@ -1,19 +1,18 @@
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { AppRouterModule } from './app-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
 
 import { AppComponent } from './app.component';
-import { DetailComponent } from './product/detail/detail.component';
-import { ListComponent } from './product/list/list.component';
-import { HeaderComponent } from './common/header/header.component';
-import { FooterComponent } from './common/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { HeaderComponent } from './component/header/header.component';
+import { ListComponent } from './component/product/list/list.component';
+import { DetailComponent } from './component/product/detail/detail.component';
+import { HomeComponent } from './component/home/home.component';
+import { CartComponent } from './component/cart/cart.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { AboutComponent } from './component/about/about.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRouterModule,
     HttpModule
   ],
-  providers: [],
+  providers: [Title],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
