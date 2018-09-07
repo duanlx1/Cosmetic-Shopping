@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
-import { Seo } from '../../../../config/seo';
+import { Seo } from '../../../../resources/seo';
 import { String } from 'typescript-string-operations';
 
 
