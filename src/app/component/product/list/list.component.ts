@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { Seo } from '../../../../resources/seo';
-import { String } from 'typescript-string-operations';
-
-
+import { SeoUtil } from '../../../common/utils/seoUtil';
 
 @Component({
   selector: 'app-list',
@@ -19,23 +17,11 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
 
-    const branch = 'Kappa';
-    // Set page title
-    this.pageTitle.setTitle(String.Format(Seo.title_product_list, branch));
+    // Set meta for SEO
+    SeoUtil.setPageTitle(this.pageTitle, Seo.title_product_list, 'Kappa');
+    SeoUtil.setSeoMetaKeyword(this.meta, Seo.keyword_product_list, 'Kappa', 'Thời trang');
+    SeoUtil.setSeoMetaDescription(this.meta, Seo.description_product_list, 'Kappa', 'Thời trang');
 
-    // Define the keyword
-    const keywords: MetaDefinition = {
-      name: 'keywords',
-      content: String.Format(Seo.keyword_product_list, branch, branch, branch, branch, branch, branch, branch)
-    };
-
-    // Define the description
-    const description: MetaDefinition = {
-      name: 'description',
-      content: String.Format(Seo.description_product_list, branch)
-    };
-
-    this.meta.addTags([keywords, description]);
   }
 
 }
