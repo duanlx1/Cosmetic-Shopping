@@ -1,13 +1,27 @@
+import { Breadcrumbs } from '../object/breadcrumb';
 import { MetaDefinition, Meta, Title } from '@angular/platform-browser';
 import { String } from 'typescript-string-operations';
 
-export class SeoUtil {
+export abstract class AbstractComponent {
+
+  public pTitle: string;
+  public mKeywords: string;
+  public mDescription: string;
+  public breadcrumbsDtoList: Array<Breadcrumbs>;
+
+  protected addBreadCrumbs(title: string, url: string, link: boolean) {
+      if (this.breadcrumbsDtoList == null) {
+          this.breadcrumbsDtoList = new Array<Breadcrumbs>();
+      }
+
+      this.breadcrumbsDtoList.push(new Breadcrumbs(title, url, link));
+  }
 
   /**
    * Set keyword as <meta name="keywords" content="Sample">
    * @param data A array string
    */
-  public static setSeoMetaKeyword(meta: Meta, message: string, ...params: string[]): void {
+  protected setSeoMetaKeyword(meta: Meta, message: string, ...params: string[]): void {
 
     // Define the keyword
     const keywords: MetaDefinition = {
@@ -22,7 +36,7 @@ export class SeoUtil {
    * Set description as <meta name="description" content="Sample">
    * @param data A array string
    */
-  public static setSeoMetaDescription(meta: Meta, message: string, ...params: string[]): void {
+  protected setSeoMetaDescription(meta: Meta, message: string, ...params: string[]): void {
 
     // Define the description
     const description: MetaDefinition = {
@@ -37,7 +51,7 @@ export class SeoUtil {
    * Set page title as <title>Sapmle</title>
    * @param data A array string
    */
-  public static setPageTitle(title: Title, message: string, ...params: string[]): void {
+  protected setPageTitle(title: Title, message: string, ...params: string[]): void {
 
     title.setTitle(String.Format(message, params[0]));
   }

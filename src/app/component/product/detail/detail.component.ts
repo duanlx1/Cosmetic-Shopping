@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../service/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../../common/object/product';
+import { AbstractComponent } from '../../../common/component/abstract.component';
 
 @Component({
   selector: 'app-detail',
@@ -9,13 +10,21 @@ import { Product } from '../../../common/object/product';
   styleUrls: ['./detail.component.css'],
   providers: [ProductService]
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent extends AbstractComponent implements OnInit {
 
   public product = new Product();
 
-  constructor(private productService: ProductService, private route: ActivatedRoute) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute) {
+    super();
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // Add breadcrumb
+    this.addBreadCrumbs('Home', '/home', true);
+    this.addBreadCrumbs('Product list', '/product/list', true);
+    this.addBreadCrumbs('Product detail', '', false);
+    console.log(this.breadcrumbsDtoList);
+  }
 
   private getProduct() {
     const id = this.route.snapshot.paramMap.get('id');
