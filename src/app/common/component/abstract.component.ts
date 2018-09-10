@@ -9,6 +9,12 @@ export abstract class AbstractComponent {
   public mDescription: string;
   public breadcrumbsDtoList: Array<Breadcrumbs>;
 
+  /**
+   * Add breadcrumb
+   * @param title Page title
+   * @param url Url
+   * @param link true or false
+   */
   protected addBreadCrumbs(title: string, url: string, link: boolean) {
       if (this.breadcrumbsDtoList == null) {
           this.breadcrumbsDtoList = new Array<Breadcrumbs>();
