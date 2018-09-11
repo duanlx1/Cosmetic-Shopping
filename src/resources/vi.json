@@ -1,0 +1,19 @@
+{
+  "list": {
+    "categories": "Danh mục",
+    "filters": "Lọc",
+    "price": "Giá",
+    "color": "Màu sắc",
+    "search": "Tìm kiếm sản phẩm",
+    "sort": {
+      "default": "Sắp xếp mặc định",
+      "popular": "Phổ biến",
+      "price_lowToHight": "Giá: thấp đến cao",
+      "price_hightToLow": "Giá: cao đến thấp"
+    },
+    "showing": "Hiển thị",
+    "of": "của",
+    "results": "kết quả",
+    "range": "Khoảng"
+  }
+}

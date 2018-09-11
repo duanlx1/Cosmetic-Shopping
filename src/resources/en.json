@@ -1,0 +1,19 @@
+{
+  "list": {
+    "categories": "Categories",
+    "filters": "Filters",
+    "price": "Price",
+    "color": "color",
+    "search": "Search Products",
+    "sort": {
+      "default": "Default Sorting",
+      "popular": "Popularity",
+      "price_lowToHight": "Price: low to hight",
+      "price_hightToLow": "Price: hight to low"
+    },
+    "showing": "Showing",
+    "of": "of",
+    "results": "results",
+    "range": "Range"
+  }
+}
