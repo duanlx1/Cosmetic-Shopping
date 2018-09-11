@@ -1,3 +1,4 @@
+import { EnumBreadcrumb } from './../../../common/enum/enum-breadcrumb.enum';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../service/product.service';
 import { ActivatedRoute } from '@angular/router';
@@ -20,10 +21,12 @@ export class DetailComponent extends AbstractComponent implements OnInit {
 
   ngOnInit() {
     // Add breadcrumb
-    this.addBreadCrumbs('Home', '/home', true);
-    this.addBreadCrumbs('Product list', '/product/list', true);
-    this.addBreadCrumbs('Product detail', '', false);
-    console.log(this.breadcrumbsDtoList);
+    this.addBreadCrumbs(this.getBreadcrumbTitle(EnumBreadcrumb.HOME_TITLE), this.getBreadcrumbUrl(EnumBreadcrumb.HOME_URL), true);
+    this.addBreadCrumbs(this.getBreadcrumbTitle(EnumBreadcrumb.PRODUCTS_TITLE, 'Clothing')
+      , this.getBreadcrumbUrl(EnumBreadcrumb.PRODUCTS_URL), true);
+    this.addBreadCrumbs(this.getBreadcrumbTitle(EnumBreadcrumb.PRODUCT_DETAIL_TITLE, 'Clothing')
+      , this.getBreadcrumbUrl(EnumBreadcrumb.PRODUCTS_URL), false);
+
   }
 
   private getProduct() {

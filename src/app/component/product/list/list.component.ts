@@ -1,3 +1,4 @@
+import { EnumBreadcrumb } from './../../../common/enum/enum-breadcrumb.enum';
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { Seo } from '../../../../resources/seo';
@@ -17,12 +18,13 @@ export class ListComponent extends AbstractComponent implements OnInit {
   ngOnInit() {
 
     // Add breadcrumb
-    this.addBreadCrumbs('home', '/home', true);
-    this.addBreadCrumbs('list', '', false);
+    this.addBreadCrumbs(this.getBreadcrumbTitle(EnumBreadcrumb.HOME_TITLE), this.getBreadcrumbUrl(EnumBreadcrumb.HOME_URL), true);
+    this.addBreadCrumbs(this.getBreadcrumbTitle(EnumBreadcrumb.PRODUCTS_TITLE, 'Adidas Utraboost')
+      , this.getBreadcrumbUrl(EnumBreadcrumb.PRODUCTS_URL), false);
 
     // Set meta for SEO
     this.setPageTitle(this.pageTitle, Seo.title_product_list, 'Kappa');
-    this.setSeoMetaKeyword(this.meta, Seo.keyword_product_list, 'Kappa', 'Thời trang');
+    this.setSeoMetaKeyword(this.meta, Seo.keyword_product_list, 'Kappa', 'Thời trang', '3', '4', '5', '6', '7');
     this.setSeoMetaDescription(this.meta, Seo.description_product_list, 'Kappa', 'Thời trang');
 
   }

@@ -23,6 +23,20 @@ export abstract class AbstractComponent {
       this.breadcrumbsDtoList.push(new Breadcrumbs(title, url, link));
   }
 
+  protected getBreadcrumbTitle(title: string, ...params: string[]): string {
+    if (params.length > 0) {
+      return String.Format(title, ...params);
+    }
+    return title;
+  }
+
+  protected getBreadcrumbUrl(url: string, ...params: string[]): string {
+    if (params.length > 0) {
+      return String.Format(url, ...params);
+    }
+    return url;
+  }
+
   /**
    * Set keyword as <meta name="keywords" content="Sample">
    * @param data A array string
@@ -32,7 +46,7 @@ export abstract class AbstractComponent {
     // Define the keyword
     const keywords: MetaDefinition = {
       name: 'keywords',
-      content: String.Format(message, params[0], params[0], params[0], params[0], params[0], params[0], params[1])
+      content: String.Format(message, ...params)
     };
 
     meta.addTags([keywords]);
@@ -47,7 +61,7 @@ export abstract class AbstractComponent {
     // Define the description
     const description: MetaDefinition = {
       name: 'description',
-      content: String.Format(message, params[0])
+      content: String.Format(message, ...params)
     };
 
     meta.addTags([ description]);
@@ -59,6 +73,6 @@ export abstract class AbstractComponent {
    */
   protected setPageTitle(title: Title, message: string, ...params: string[]): void {
 
-    title.setTitle(String.Format(message, params[0]));
+    title.setTitle(String.Format(message, ...params));
   }
 }
