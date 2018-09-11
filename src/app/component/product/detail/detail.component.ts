@@ -1,4 +1,4 @@
-import { EnumBreadcrumb } from './../../../common/enum/enum-breadcrumb.enum';
+import { EnumBreadcrumb } from '../../../common/enum/breadcrumb.enum';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../service/product.service';
 import { ActivatedRoute } from '@angular/router';

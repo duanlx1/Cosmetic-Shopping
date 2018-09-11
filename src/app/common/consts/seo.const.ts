@@ -2,7 +2,7 @@
 /**
  * SEO
  */
-export const Seo = {
+export const SeoConst = {
   title_home: 'Home Title',
   description_home: 'home description',
   keyword_home: 'Home keyword',
