@@ -4,7 +4,7 @@
     "filters": "Filters",
     "price": "Price",
     "color": "color",
-    "search": "Search Products",
+    "search": "Search Products...",
     "sort": {
       "default": "Default Sorting",
       "popular": "Popularity",
@@ -15,5 +15,22 @@
     "of": "of",
     "results": "results",
     "range": "Range"
+  },
+  "header": {
+    "home": "Home",
+    "shop" : "Shop",
+    "sale": "Sale",
+    "features": "Features",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "getInTouch": "GET IN TOUCH",
+    "categories": "CATEGORIES",
+    "links": "LINKS",
+    "help": "HELP",
+    "letter": "NEWSLETTER",
+    "subscribe": "SUBSCRIBE"
   }
 }

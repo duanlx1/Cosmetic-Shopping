@@ -15,5 +15,22 @@
     "of": "của",
     "results": "kết quả",
     "range": "Khoảng"
+  },
+  "header": {
+    "home": "Trang chủ",
+    "shop" : "Shop",
+    "sale": "Khuyến mại",
+    "features": "Features",
+    "blog": "Blog",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ"
+  },
+  "footer": {
+    "getInTouch": "ĐẾN VỚI CHÚNG TÔI",
+    "categories": "DANH MỤC",
+    "links": "LIÊN KẾT",
+    "help": "TRỢ GIÚP",
+    "letter": "TIN TỨC",
+    "subscribe": "ĐĂNG KÍ"
   }
 }

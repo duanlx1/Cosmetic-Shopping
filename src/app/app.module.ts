@@ -1,7 +1,10 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { AppRouterModule } from './app-routing.module';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -30,7 +33,15 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
   imports: [
     BrowserModule,
     AppRouterModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [Title],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -38,3 +49,11 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 })
 
 export class AppModule { }
+
+/**
+ * Load language file
+ * @param http http
+ */
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'i18n/', '.json');
+}
