@@ -36,6 +36,14 @@ export class ProductService {
 
   }
 
+  public getAllCategories(): Promise<any> {
+    const options = new RequestOptions({ headers: this.headers});
+    return this.http.get(API_URL + '/product_categories', options)
+      .toPromise()
+      .then(res => res.json())
+      .catch(this.handleError);
+  }
+
   /**
    * Handle error.
    * @param error Error

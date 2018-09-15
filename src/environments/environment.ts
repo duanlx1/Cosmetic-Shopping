@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://sample.com',
+  apiUrl: 'http://35.196.80.162:3001/api/v1',
   apiKey: '12345678'
 };
 

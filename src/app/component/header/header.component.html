@@ -19,13 +19,12 @@
 					<span class="topbar-email">
 						fashe@example.com
 					</span>
-
 					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
+						<select  (change)="setLanguage($event)" class="selection-1" class="form-control" ng-model="sortKey" >
+							<option value="en">EN</option>
+							<option value="vi">VI</option>
 						</select>
-					</div>
+          </div>
 				</div>
 			</div>
 
